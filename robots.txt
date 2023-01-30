@@ -1,0 +1,1 @@
+Sitemap: https://sparrow0hawk.github.io/template-revealjs-quarto/sitemap.xml
