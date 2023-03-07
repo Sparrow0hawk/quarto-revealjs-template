@@ -55,6 +55,14 @@ on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/
 
 There is a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/).
 
+## pre-commit
+
+A basic [pre-commit](https://pre-commit.com) configuration is included (see ~.pre-commit-config.yaml~) however to use it
+you will have to insatll `pre-commit` in your cloned repository. This requires `pre-commit` to be installed on your
+system or within a Python Virtual Environment. To find out more about installing and configuring `pre-commit` see the
+article [pre-commit : Protecting your future self](https://rse.shef.ac.uk/blog/pre-commit/).
+
+
 ## QR Code generation
 
 The [quarto-qrcode](https://github.com/jmbuhr/quarto-qrcode) extension  is particularly useful as it simplifies
