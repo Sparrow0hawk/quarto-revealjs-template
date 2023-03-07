@@ -51,6 +51,13 @@ You are now ready to create your slides by editing the `index.qmd` in the root o
 on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/presentations/revealjs/) guide and the
 [Revealjs Reference](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
 
+## pre-commit
+
+A basic [pre-commit](https://pre-commit.com) configuration is included (see ~.pre-commit-config.yaml~) however to use it
+you will have to install `pre-commit` in your cloned repository. This requires `pre-commit` to be installed on your
+system or within a Python Virtual Environment. To find out more about installing and configuring `pre-commit` see the
+article [pre-commit : Protecting your future self](https://rse.shef.ac.uk/blog/pre-commit/).
+
 # Extensions
 
 There is a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/).
