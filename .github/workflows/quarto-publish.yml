@@ -22,6 +22,7 @@ jobs:
       - name: Install Quarto Extensions
         run:
           quarto install --no-prompt extension jmbuhr/quarto-qrcode
+          quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
 
       # add software dependencies here
 
