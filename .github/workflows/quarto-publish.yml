@@ -17,10 +17,10 @@ jobs:
           # To install LaTeX to build PDF book
           tinytex: true
           # uncomment below and fill to pin a version
-          version: 1.2.335
+          # version: 1.2.335
 
       - name: Install Quarto Extensions
-        run:
+        run: |
           quarto install --no-prompt extension jmbuhr/quarto-qrcode
           quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
 
