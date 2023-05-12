@@ -7,6 +7,12 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
 
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.7.1
+    hooks:
+      - id: markdownlint-cli2
+        args: []
+
 ci:
   autofix_prs: true
   autofix_commit_msg: '[pre-commit.ci] Fixing issues with pre-commit'
