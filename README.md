@@ -7,17 +7,16 @@ the Quarto source to HTML and publish them via [GitHub Pages](https://pages.gith
 Its a useful way of making slides portable as they are then available via the URL and naturally the slides are version
 controlled.
 
+## Usage
 
-# Usage
-
-## Use the Template
+### Use the Template
 
 Start by clicking on the "_Use this Template_" button and selecting "_Create a new repository_". You will have to choose
 a name for the repository. When ready click on "_Create repository from template_" and this will copy all the resources
 into a new repository under your GitHub account ready for you to start using. You will probably want to clone the
 repository locally to do so.
 
-## Edit `_quarto.yaml`
+### Edit `_quarto.yaml`
 
 You will have to edit `_quarto.yaml` and change the `site-url` to reflect your GitHub user account and the name of the
 repository you have chosen for this project. Its probably wise to modify the `title` and `description` too. The sample
@@ -33,11 +32,11 @@ website:
   description: "<INSERT_DESCRIPTION>"
 ```
 
-## Publish Locally
+### Publish Locally
 
 You will need to run `quarto publish gh-pages` once locally before deploying this template.
 
-## Repository settings
+### Repository settings
 
 You will also need to make sure your repository action settings are configured to allow read and write permissions.
 
@@ -45,24 +44,24 @@ You will also need to make sure your repository action settings are configured t
 
 You can find this settings at `https://github.com/[USER]/[repo]/settings/actions`
 
-## Write your slides
+### Write your slides
 
 You are now ready to create your slides by editing the `index.qmd` in the root of the repository. For more information
 on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/presentations/revealjs/) guide and the
 [Revealjs Reference](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
 
-## pre-commit
+### pre-commit
 
 A basic [pre-commit](https://pre-commit.com) configuration is included (see ~.pre-commit-config.yaml~) however to use it
 you will have to install `pre-commit` in your cloned repository. This requires `pre-commit` to be installed on your
 system or within a Python Virtual Environment. To find out more about installing and configuring `pre-commit` see the
 article [pre-commit : Protecting your future self](https://rse.shef.ac.uk/blog/pre-commit/).
 
-# Extensions
+## Extensions
 
 There is a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/).
 
-## QR Code generation
+### QR Code generation
 
 The [quarto-qrcode](https://github.com/jmbuhr/quarto-qrcode) extension  is particularly useful as it simplifies
 generating and embedding [QR Codes](https://en.wikipedia.org/wiki/QR_code) that link to websites in your slides.

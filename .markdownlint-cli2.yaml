@@ -12,6 +12,7 @@ config:
 # Globs
 globs:
   - "**/*.md"
+  - "**/*.qmd"
 
 # Fix any fixable errors
 fix: false
