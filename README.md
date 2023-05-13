@@ -52,16 +52,31 @@ on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/
 
 ### pre-commit
 
-A basic [pre-commit](https://pre-commit.com) configuration is included (see ~.pre-commit-config.yaml~) however to use it
-you will have to install `pre-commit` in your cloned repository. This requires `pre-commit` to be installed on your
-system or within a Python Virtual Environment. To find out more about installing and configuring `pre-commit` see the
-article [pre-commit : Protecting your future self](https://rse.shef.ac.uk/blog/pre-commit/).
+A [pre-commit](https://pre-commit.com) configuration is included (see `.pre-commit-config.yaml`) and includes a hook for
+[markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) (see `.markdownlint-cli2.yaml` for
+configuration). To use `pre-commit` you will have to install `pre-commit` in your cloned repository. This requires
+`pre-commit` to be installed on your system or within a Python Virtual Environment. To find out more about installing
+and configuring `pre-commit` see the article [pre-commit : Protecting your future
+self](https://rse.shef.ac.uk/blog/pre-commit/) or refer to the official documentation.
 
 ## Extensions
 
-There is a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/).
+There is a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/). These are installed as
+part of the `publish.yml` action that is included in the template to publish the slides via GitHub pages but to use and
+render them locally when developing the slides you will have to install them.
+
+``` bash
+quarto install extension jmbuhr/quarto-qrcode
+quarto install extension grantmcdermott/quarto-revealjs-clean
+```
 
 ### QR Code generation
 
-The [quarto-qrcode](https://github.com/jmbuhr/quarto-qrcode) extension  is particularly useful as it simplifies
+The [quarto-qrcode](https://github.com/jmbuhr/quarto-qrcode) extension is particularly useful as it simplifies
 generating and embedding [QR Codes](https://en.wikipedia.org/wiki/QR_code) that link to websites in your slides.
+
+### Clean Theme
+
+The [quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-clean/) theme is a nice (clean!)
+theme. For a full example of all the features of this theme see the authors
+[quarto-revealjs-clean-demo](https://github.com/grantmcdermott/quarto-revealjs-clean-demo).
