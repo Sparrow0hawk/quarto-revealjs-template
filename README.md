@@ -32,6 +32,18 @@ website:
   description: "<INSERT_DESCRIPTION>"
 ```
 
+### Install Extensions
+
+This template uses some [extensions]() ([quarto-clean](https://github.com/grantmcdermott/quarto-revealjs-clean), [QR
+extension](https://github.com/jmbuhr/quarto-qrcode) and [confetti](https://github.com/ArthurData/quarto-confetti)) and
+these need to be installed locally _before_ you can proceed.
+
+``` bash
+quarto install --no-prompt extension jmbuhr/quarto-qrcode
+quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
+quarto install --no-prompt extension ArthurData/quarto-confetti
+```
+
 ### Publish Locally
 
 You will need to run `quarto publish gh-pages` once locally before deploying this template.

@@ -23,6 +23,7 @@ jobs:
         run: |
           quarto install --no-prompt extension jmbuhr/quarto-qrcode
           quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
+          quarto install --no-prompt extension ArthurData/quarto-confetti
 
       # add software dependencies here
 

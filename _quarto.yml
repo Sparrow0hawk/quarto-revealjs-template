@@ -2,6 +2,6 @@ project:
   type: website
 
 website:
-  title: "Template quarto revealjs project"
-  site-url: https://sparrow0hawk.github.io/template-revealjs-quarto
-  description: "Template site for revealjs with quarto"
+  title: "<TITLE>"
+  site-url: https://<YOUR_GITHUB_USERNAME>.github.io/<NAME_OF_REPOSITORY
+  description: "<DESCRIPTION>"

@@ -1,8 +1,205 @@
 ---
 title: "Template Revealjs Quarto site"
-format: revealjs
+# format: revealjs
+author:
+  - name: Your Name
+    orcid: 0000-0000-0000-0000
+    email: email@address.work
+    affiliations: Employers Name
+from: markdown+emoji
+format:
+  clean-revealjs:
+    incremental: false
+    slide-number: true
+    show-slide-number: speaker
+    auto-stretch: false
+    chalkboard: true
+    # embed-resources: true
+    # standalone: true
+revealjs-plugins:
+  - confetti
+footer: "**Slides** : [**github-username.github.io/<repository>**](https://github-username.github.io/<repository>)"
+project:
+  preview:
+    port: 7864
+    host: localhost
+    watch-inputs: true
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Quarto RevealJS Slides
+
+This is a website [Quarto](https://quarto.org/) website of [RevealJS]() slides.
+
+The template can be used as a starting point for your own slides and includes a number of different layouts and examples
+of Markdown syntax, slide layout, links, embedding images and configuration options.
+
+## Formatting
+
+Quarto slides are written in [Markdown](https://quarto.org/docs/authoring/markdown-basics.html).
+
+| Markdown Syntax                              | Output                                |
+|:---------------------------------------------|:--------------------------------------|
+| `*italics*`, `**bold**`, `***bolditalics***` | *italics*, **bold**, **bold italics** |
+| `superscript^1^`, `subscript~2~`             | superscript^1^, subscript~2~          |
+| `~~strikethrough~~`                          | ~~strikethrough~~                     |
+| ```code```                                   | `code`                                |
+| `# Header 1`                                 |                                       |
+| `## Header 2`                                |                                       |
+| `[Quarto](https://quarto.org)`               | [Quarto](https://quarto.org)          |
+
+::: {.notes}
+Speaker Notes can be added to each slide. **Formatting** can be used here too.
+:::
+
+## Columns and Lists
+
+Slides can have columns and you can create [lists](https://quarto.org/docs/authoring/markdown-basics.html#lists) of
+different types.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**ToDo**
+```
++ Learn Markdown
++ Create Quarto Slides
++ Publish on GitHub
+```
+:::
+
+::: {.column width="50%"}
+**ToDo**
+
++ Learn Markdown
++ Create Quarto Slides
++ Publish on GitHub
+
+:::
+::::
+
+::: {.notes}
+We can create unordered and ordered lists.
+:::
+
+## Columns and Lists
+
+Slides can have columns and you can create [lists](https://quarto.org/docs/authoring/markdown-basics.html#lists) of
+different types.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Ordered**
+```
+1. A comes before
+2. B which is followed by
+3. C
+```
+:::
+
+::: {.column width="50%"}
+**Ordered**
+
+1. A comes before
+2. B which is followed by
+3. C
+
+:::
+::::
+
+::: {.notes}
+Or ordered lists.
+:::
+
+## Tables
+
+You can manually add [tables](https://quarto.org/docs/authoring/markdown-basics.html#tables).
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+```
+
+:::
+::: {.column width="50%"}
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+
+:::
+::::
+
+::: {.notes}
+Tables can be added, but there is a better way to include these programatically
+:::
+
+## Equations
+
+
+| Markdown Syntax                    | Output                       |
+|:----------------------------------:|:-----------------------------|
+| `inline math $E = mc^{2}$`         | inline math $E = mc^{2}$     |
+| ```display math: $$E = mc^{2}$$``` | display math: $$E = mc^{2}$$ |
+
+::: {.notes}
+You can write equations if you need to.
+:::
+
+
+## Embed Images
+
+::: {.notes}
+:::
+
+
+## R code
+
+
+::: {.notes}
+[R](https://www.r-project.org/) code can be embeded and executed to produce tables and figures.
+:::
+
+## Python code
+
+::: {.notes}
+As can [Python](https://www.python.org) code.
+:::
+
+## General code
+
+There are lots of options for showing, hiding, highlighting code blocks.
+
+
+## The Documentation is Good
+
+The official documentation is really good.
+
++ [Get Started](https://quarto.org/docs/get-started/)
++ [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
++ [Guide](https://quarto.org/docs/guide/) with many sections on [Presentations](https://quarto.org/docs/presentations/)
+  [Website](https://quarto.org/docs/websites/), [Books](https://quarto.org/docs/books/) and more.
+
+
+## Extensions
+
+:::: {.columns}
+
+::: {.column width="50%"}
+There are an increasing number of [Extensions](https://quarto.org/docs/extensions/) for themes and other functionality
+such as QR codes or confetti (press `c` whilst viewing these slides :wink: ).
+
+:::
+::: {.column width=50%}
+{{< qrcode https://ns-rse.github.io/quarto-revealjs-template >}}
+:::
+::::
