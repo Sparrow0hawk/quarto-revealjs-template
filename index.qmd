@@ -29,7 +29,7 @@ project:
 
 ## Quarto RevealJS Slides
 
-This is a website [Quarto](https://quarto.org/) website of [RevealJS]() slides.
+This is a website [Quarto](https://quarto.org/) website of [RevealJS](https://revealjs.com/) slides.
 
 The template can be used as a starting point for your own slides and includes a number of different layouts and examples
 of Markdown syntax, slide layout, links, embedding images and configuration options.
@@ -61,11 +61,13 @@ different types.
 
 ::: {.column width="50%"}
 **ToDo**
-```
+
+```markdown
 + Learn Markdown
 + Create Quarto Slides
 + Publish on GitHub
 ```
+
 :::
 
 ::: {.column width="50%"}
@@ -79,10 +81,10 @@ different types.
 ::::
 
 ::: {.notes}
-We can create unordered and ordered lists.
+We can create unordered lists.
 :::
 
-## Columns and Lists
+## Columns and Lists (cont.)
 
 Slides can have columns and you can create [lists](https://quarto.org/docs/authoring/markdown-basics.html#lists) of
 different types.
@@ -91,11 +93,13 @@ different types.
 
 ::: {.column width="50%"}
 **Ordered**
-```
+
+```markdown
 1. A comes before
 2. B which is followed by
 3. C
 ```
+
 :::
 
 ::: {.column width="50%"}
@@ -119,7 +123,8 @@ You can manually add [tables](https://quarto.org/docs/authoring/markdown-basics.
 :::: {.columns}
 
 ::: {.column width="50%"}
-```
+
+```markdown
 | Right | Left | Default | Center |
 |------:|:-----|---------|:------:|
 |   12  |  12  |    12   |    12  |
@@ -145,7 +150,6 @@ Tables can be added, but there is a better way to include these programatically
 
 ## Equations
 
-
 | Markdown Syntax                    | Output                       |
 |:----------------------------------:|:-----------------------------|
 | `inline math $E = mc^{2}$`         | inline math $E = mc^{2}$     |
@@ -155,15 +159,12 @@ Tables can be added, but there is a better way to include these programatically
 You can write equations if you need to.
 :::
 
-
 ## Embed Images
 
 ::: {.notes}
 :::
 
-
 ## R code
-
 
 ::: {.notes}
 [R](https://www.r-project.org/) code can be embeded and executed to produce tables and figures.
@@ -179,7 +180,6 @@ As can [Python](https://www.python.org) code.
 
 There are lots of options for showing, hiding, highlighting code blocks.
 
-
 ## The Documentation is Good
 
 The official documentation is really good.
@@ -188,7 +188,6 @@ The official documentation is really good.
 + [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
 + [Guide](https://quarto.org/docs/guide/) with many sections on [Presentations](https://quarto.org/docs/presentations/)
   [Website](https://quarto.org/docs/websites/), [Books](https://quarto.org/docs/books/) and more.
-
 
 ## Extensions
 
@@ -200,6 +199,6 @@ such as QR codes or confetti (press `c` whilst viewing these slides :wink: ).
 
 :::
 ::: {.column width=50%}
-{{< qrcode https://ns-rse.github.io/quarto-revealjs-template >}}
+{{< qrcode <https://ns-rse.github.io/quarto-revealjs-template> >}}
 :::
 ::::

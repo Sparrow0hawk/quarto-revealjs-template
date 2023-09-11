@@ -15,4 +15,4 @@ globs:
   - "**/*.qmd"
 
 # Fix any fixable errors
-fix: false
+fix: true

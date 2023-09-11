@@ -69,11 +69,9 @@ quarto install --no-prompt extension ArthurData/quarto-confetti
 You will need to run `quarto publish gh-pages` once locally before deploying this template. This creates a new branch
 `gh-pages` which is where the resulting pages are published to and pushes them to GitHub.
 
-
 ``` bash
 quarto publish gh-pages
 ```
-
 
 ### Write your slides
 
@@ -82,7 +80,6 @@ on writing RevealJS slides in Quarto see the [RevealJS](https://quarto.org/docs/
 [Revealjs Reference](https://quarto.org/docs/reference/formats/presentations/revealjs.html).
 
 When you stage, commit and push your commits to GitHub the `quarto-publish.yaml` will run.
-
 
 ## pre-commit
 
@@ -119,12 +116,10 @@ The [quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-cl
 theme. For a full example of all the features of this theme see the authors
 [quarto-revealjs-clean-demo](https://github.com/grantmcdermott/quarto-revealjs-clean-demo).
 
-
 ### Confetti
 
 The [confetti](https://github.com/ArthurData/quarto-confetti) extension adds some eye-candy and throws confetti over
 your slides whenever you press the `c` button. They originate from the mouse location and therefore follow it around.
-
 
 ## Embedding Code
 
@@ -133,16 +128,12 @@ results, whether that is tables, figures, or numbers, can be included in the res
 languages including perhaps the two of the most popular languages [R](https://www.r-project.org) and
 [Python](https://www.python.org).
 
-### R
-
-**TODO**
+### R (**TODO**)
 
 You need to enable installation of R and the required packages in the `.github/workflows/quarto-publish.yaml` and a
 sample section is already present that should just need un-commenting.
 
-### Python
-
-**TODO**
+### Python (**TODO**)
 
 As with R need to enable installation of R and the required packages in the `.github/workflows/quarto-publish.yaml` and
 a sample section is already present that should just need un-commenting.
