@@ -92,18 +92,13 @@ self](https://rse.shef.ac.uk/blog/pre-commit/) or refer to the official document
 
 ## Extensions
 
-There is a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/). Three are included in this
+There are a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/). Three are included in this
 template and they are also installed during the publishing and deployment of the resulting slides as they are listed in
 the `quarto-publish.yml`. You should have installed these locally as instructed above.
 
-``` bash
-quarto install --no-prompt extension jmbuhr/quarto-qrcode
-quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
-quarto install --no-prompt extension ArthurData/quarto-confetti
-```
-
-If you use additional extensions you **MUST** remember to add them to the `Install Quarto Extensions` section of
-`.github/workflows/quarto-publish.yaml`.
+If you use additional extensions then as well as installing them locally on your computer you **MUST** remember to add
+them to the `Install Quarto Extensions` section of `.github/workflows/quarto-publish.yaml` otherwise your pages will not
+build and deploy.
 
 ### QR Code generation
 
@@ -128,12 +123,21 @@ results, whether that is tables, figures, or numbers, can be included in the res
 languages including perhaps the two of the most popular languages [R](https://www.r-project.org) and
 [Python](https://www.python.org).
 
-### R (**TODO**)
+### R
 
-You need to enable installation of R and the required packages in the `.github/workflows/quarto-publish.yaml` and a
-sample section is already present that should just need un-commenting.
+You will likely have [R](https://www.r-project.org) installed locally along with all the packages that are required (and
+perhaps even use reproducible environments using [renv](https://rstudio.github.io/renv/) or
+[pak](https://pak.r-lib.org)).
 
-### Python (**TODO**)
+For slides to build and execute your R code correctly you need to enable installation of R and the required packages in
+the `.github/workflows/quarto-publish.yaml`. A sample section is already present that should just need un-commenting,
+but may need tweaking if you use any packages to manage a reproducible environment.
 
-As with R need to enable installation of R and the required packages in the `.github/workflows/quarto-publish.yaml` and
-a sample section is already present that should just need un-commenting.
+### Python
+
+Similarly with Python you likely have Virtual Environments configured locally to run your Python code, and these should
+have be detailed in a `requirements.txt` file so they can be installed when the GitHub Workflow is executed to build
+your pages on GitHub.
+
+You will need to enable installation of Python and these packages in the `.github/workflows/quarto-publish.yaml` and
+a sample section is already present that can be un-commented if required.

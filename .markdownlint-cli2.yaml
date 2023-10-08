@@ -9,10 +9,13 @@ config:
     allowed_elements:
       - div
 
-# Globs
 globs:
   - "**/*.md"
   - "**/*.qmd"
+
+ignore:
+  - ".quarto/*"
+  - "_site/*"
 
 # Fix any fixable errors
 fix: true

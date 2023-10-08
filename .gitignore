@@ -1,4 +1,6 @@
 /.quarto/
-_site
+_site/*
 \#*
 *~
+.quarto/*
+_extensions/*

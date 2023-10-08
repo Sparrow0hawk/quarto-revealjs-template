@@ -29,7 +29,7 @@ project:
 
 ## Quarto RevealJS Slides
 
-This is a website [Quarto](https://quarto.org/) website of [RevealJS](https://revealjs.com/) slides.
+This is a [Quarto](https://quarto.org/) template for creating [RevealJS](https://revealjs.com/) slides.
 
 The template can be used as a starting point for your own slides and includes a number of different layouts and examples
 of Markdown syntax, slide layout, links, embedding images and configuration options.
@@ -44,8 +44,6 @@ Quarto slides are written in [Markdown](https://quarto.org/docs/authoring/markdo
 | `superscript^1^`, `subscript~2~`             | superscript^1^, subscript~2~          |
 | `~~strikethrough~~`                          | ~~strikethrough~~                     |
 | ```code```                                   | `code`                                |
-| `# Header 1`                                 |                                       |
-| `## Header 2`                                |                                       |
 | `[Quarto](https://quarto.org)`               | [Quarto](https://quarto.org)          |
 
 ::: {.notes}
@@ -60,7 +58,7 @@ different types.
 :::: {.columns}
 
 ::: {.column width="50%"}
-Unordered...
+**ToDo** (code)
 
 ```markdown
 + Learn Markdown
@@ -71,7 +69,7 @@ Unordered...
 :::
 
 ::: {.column width="50%"}
-Unordered...
+**ToDo** (Rendered)
 
 + Learn Markdown
 + Create Quarto Slides
@@ -81,18 +79,15 @@ Unordered...
 ::::
 
 ::: {.notes}
-We can create unordered lists.
+Slides can have columns and we can create unordered lists.
 :::
 
 ## Columns and Lists (cont.)
 
-Slides can have columns and you can create [lists](https://quarto.org/docs/authoring/markdown-basics.html#lists) of
-different types.
-
 :::: {.columns}
 
 ::: {.column width="50%"}
-Ordered...
+**Ordered** (code)
 
 ```markdown
 1. A comes before
@@ -103,7 +98,7 @@ Ordered...
 :::
 
 ::: {.column width="50%"}
-Ordered...
+**Ordered** (Rendered)
 
 1. A comes before
 2. B which is followed by
@@ -161,15 +156,68 @@ You can write equations if you need to.
 
 ## Embed Images
 
+[Figures](https://quarto.org/docs/authoring/figures.html) can be embeded using a URL and resized.
+
+```markdown
+![Relaxing in the mountains](https://live.staticflickr.com/65535/53144704609_c5e6fa8c77_k.jpg){width=700}
+```
+
+![Relaxing in the Julian Alps](https://live.staticflickr.com/65535/53144704609_c5e6fa8c77_k.jpg){width=700}
+
+::: {.notes}
+:::
+
+## Embed Images (*cont.*)
+
+You can also include images locally.^[Make sure to `git add` them otherwise they won't publish] and make them hyperlinks.
+
+```markdown
+![[OSC Sheffield](https://osc-international.com/osc-sheffield)](img/OSC_Sheffield.png){width=300}
+```
+
+![[OSC Sheffield](https://osc-international.com/osc-sheffield)](img/OSC_Sheffield.png){width=300}
+
 ::: {.notes}
 :::
 
 ## R code
 
-```{R}
+:::: {.columns}
+
+::: {.column width="50%"}
+Include [R code and output](https://quarto.org/docs/computations/r.html) with automatic referencing (see @fig-airquality2)
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: "Temperature and ozone level."
+#| warning: false
+#| eval: false
+#| echo: true
 library(ggplot2)
-library(reticulate)
+
+ggplot(airquality, aes(Temp, Ozone)) +
+  geom_point() +
+  geom_smooth(method = "loess")
 ```
+
+:::
+::: {.column width="50%"}
+
+```{r}
+#| label: fig-airquality2
+#| fig-cap: "Temperature and ozone level."
+#| warning: false
+
+library(ggplot2)
+
+ggplot(airquality, aes(Temp, Ozone)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+```
+
+:::
+
+::::
 
 ::: {.notes}
 [R](https://www.r-project.org/) code can be embeded and executed to produce tables and figures.
@@ -177,20 +225,78 @@ library(reticulate)
 
 ## Python code
 
-Requires you to load the `reticulate` library in R first.
+::: {.column width="50%"}
+Include [Python code and output](https://quarto.org/docs/computations/python.html) too
 
-```{python}
+```{.python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis."
+#| warning: false
+#| eval: false
+#| echo: true
 import numpy as np
-import pandas as pd
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'}
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
 ```
 
+:::
+::: {.column width="50%"}
+
+```{.python}
+#| label: fig-polar2
+#| fig-cap: "A line plot on a polar axis."
+#| warning: false
+#| eval: true
+#| echo: true
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'}
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+:::
+::::
+
 ::: {.notes}
-As can [Python](https://www.python.org) code.
+You can include [Python](https://www.python.org) code too
 :::
 
 ## General code
 
-There are lots of options for showing, hiding, highlighting code blocks.
+There are lots of options for showing, hiding, highlighting [code
+blocks](https://quarto.org/docs/presentations/revealjs/#code-blocks).
+
+```{.python code-line-numbers="6-8"}
+#| eval: true
+#| echo: true
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
 
 ## The Documentation is Good
 
@@ -208,6 +314,11 @@ The official documentation is really good.
 ::: {.column width="50%"}
 There are an increasing number of [Extensions](https://quarto.org/docs/extensions/) for themes and other functionality
 such as QR codes or confetti (press `c` whilst viewing these slides :wink: ).
+
++ [Shortcode/Filter](https://quarto.org/docs/extensions/listing-filters.html)
++ [Journal Articles](https://quarto.org/docs/extensions/listing-journals.html)
++ [Custom Formats](https://quarto.org/docs/extensions/listing-formats.html)
++ [**RevealJS**](https://quarto.org/docs/extensions/listing-revealjs.html)
 
 :::
 ::: {.column width=50%}
