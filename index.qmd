@@ -26,6 +26,11 @@ project:
     watch-inputs: true
 ---
 
+## Scan This!
+
+{{< qrcode https://ns-rse.github.io/quarto-revealjs-template width=400 height=400 >}}
+
+[ns-rse.github.io/quarto-revealjs-template](https://ns-rse.github.io/quarto-revealjs-template)
 
 ## Quarto RevealJS Slides
 
