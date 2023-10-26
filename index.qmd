@@ -317,8 +317,8 @@ The official documentation is really good.
 :::: {.columns}
 
 ::: {.column width="50%"}
-There are an increasing number of [Extensions](https://quarto.org/docs/extensions/) for themes and other functionality
-such as QR codes or confetti (press `c` whilst viewing these slides :wink: ).
+[Extensions](https://quarto.org/docs/extensions/) for themes and other functionality
+(press `c` whilst viewing these slides :wink: ).
 
 + [Shortcode/Filter](https://quarto.org/docs/extensions/listing-filters.html)
 + [Journal Articles](https://quarto.org/docs/extensions/listing-journals.html)
@@ -327,6 +327,6 @@ such as QR codes or confetti (press `c` whilst viewing these slides :wink: ).
 
 :::
 ::: {.column width=50%}
-{{< qrcode <https://ns-rse.github.io/quarto-revealjs-template> >}}
+{{< qrcode <https://ns-rse.github.io/quarto-revealjs-template> qr2 width=400 height=400 >}}
 :::
 ::::
