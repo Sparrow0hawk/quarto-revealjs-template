@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -26,7 +26,7 @@ jobs:
           quarto install --no-prompt extension ArthurData/quarto-confetti
 
       - name: Install Python and Dependencies
-        uses: actions/setup-python@v4.3.0
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
           cache: 'pip'
