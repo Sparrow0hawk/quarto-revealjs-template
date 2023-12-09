@@ -16,6 +16,7 @@ format:
     chalkboard: true
     # embed-resources: true
     # standalone: true
+    header: Quarto RevealJS Template
 revealjs-plugins:
   - confetti
 footer: "**Slides** : [**github-username.github.io/<repository>**](https://github-username.github.io/<repository>)"
@@ -24,11 +25,14 @@ project:
     port: 7864
     host: localhost
     watch-inputs: true
+filters:
+  - openlinksinnewpage
+  - reveal-header
 ---
 
-## Scan This!
+## Scan This
 
-{{< qrcode https://ns-rse.github.io/quarto-revealjs-template qr1 width=400 height=400 >}}
+{{< qrcode <https://ns-rse.github.io/quarto-revealjs-template> qr1 width=400 height=400 >}}
 
 [ns-rse.github.io/quarto-revealjs-template](https://ns-rse.github.io/quarto-revealjs-template)
 
@@ -164,7 +168,7 @@ You can write equations if you need to.
 [Figures](https://quarto.org/docs/authoring/figures.html) can be embeded using a URL and resized.
 
 ```markdown
-![Relaxing in the mountains](https://live.staticflickr.com/65535/53144704609_c5e6fa8c77_k.jpg){width=700}
+![Relaxing in the Julian Alps](https://live.staticflickr.com/65535/53144704609_c5e6fa8c77_k.jpg){width=700}
 ```
 
 ![Relaxing in the Julian Alps](https://live.staticflickr.com/65535/53144704609_c5e6fa8c77_k.jpg){width=700}
@@ -316,7 +320,7 @@ The official documentation is really good.
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="70%"}
 [Extensions](https://quarto.org/docs/extensions/) for themes and other functionality
 (press `c` whilst viewing these slides :wink: ).
 
@@ -324,9 +328,11 @@ The official documentation is really good.
 + [Journal Articles](https://quarto.org/docs/extensions/listing-journals.html)
 + [Custom Formats](https://quarto.org/docs/extensions/listing-formats.html)
 + [**RevealJS**](https://quarto.org/docs/extensions/listing-revealjs.html)
++ [awesome-quarto](https://github.com/mcanouil/awesome-quarto) - Quarto tools & examples
 
 :::
-::: {.column width=50%}
+::: {.column width=30%}
+This Template...
 {{< qrcode <https://ns-rse.github.io/quarto-revealjs-template> qr2 width=400 height=400 >}}
 :::
 ::::

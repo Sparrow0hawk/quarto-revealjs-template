@@ -55,13 +55,16 @@ website:
 
 This template uses some [extensions](https://quarto.org/docs/extensions/)
 ([quarto-clean](https://github.com/grantmcdermott/quarto-revealjs-clean), [QR
-extension](https://github.com/jmbuhr/quarto-qrcode) and [confetti](https://github.com/ArthurData/quarto-confetti)) and
+extension](https://github.com/jmbuhr/quarto-qrcode), [confetti](https://github.com/ArthurData/quarto-confetti)),
+[openlinksinnewpage](https://github.com/davidwilby/openlinksinnewpage) and [reveal-header](https://github.com/shafayetShafee/reveal-header)
 these need to be installed locally _before_ you can proceed.
 
 ``` bash
-quarto install --no-prompt extension jmbuhr/quarto-qrcode
-quarto install --no-prompt extension grantmcdermott/quarto-revealjs-clean
-quarto install --no-prompt extension ArthurData/quarto-confetti
+quarto add --no-prompt jmbuhr/quarto-qrcode
+quarto add --no-prompt grantmcdermott/quarto-revealjs-clean
+quarto add --no-prompt ArthurData/quarto-confetti
+quarto add --no-prompt davidwilby/openlinksinnewpage
+quarto add --no-prompt shafayetShafee/reveal-header
 ```
 
 ### Publish Locally
@@ -92,9 +95,10 @@ self](https://rse.shef.ac.uk/blog/pre-commit/) or refer to the official document
 
 ## Extensions
 
-There are a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/). Three are included in this
+There are a growing number of useful [Quarto extensions](https://quarto.org/docs/extensions/). Five are included in this
 template and they are also installed during the publishing and deployment of the resulting slides as they are listed in
-the `quarto-publish.yml`. You should have installed these locally as instructed above.
+the `quarto-publish.yml` under the `Install Quarto Extensions` step. You should have installed these locally as
+instructed above.
 
 If you use additional extensions then as well as installing them locally on your computer you **MUST** remember to add
 them to the `Install Quarto Extensions` section of `.github/workflows/quarto-publish.yaml` otherwise your pages will not
@@ -115,6 +119,19 @@ theme. For a full example of all the features of this theme see the authors
 
 The [confetti](https://github.com/ArthurData/quarto-confetti) extension adds some eye-candy and throws confetti over
 your slides whenever you press the `c` button. They originate from the mouse location and therefore follow it around.
+
+### Open Links In New Page
+
+The [openlinksinnewpage](https://github.com/davidwilby/openlinksinnewpage) extension does what it says on the tin and
+ensures that when you click on a link in the resulting slides it will open a new tab/page (this saves you and others who
+may not know of the shortcut from having to hold down `Ctrl` to achieve the same effect).
+
+### Reveal Header
+
+The [reveal-header](https://github.com/shafayetShafee/reveal-header) extension allows you to add headers as well as
+footers to all slides. This template includes a simple text `header:`  nested under the `format: <theme>:` YAML header
+in `index.qmd`. Please refer to the [documetation](https://github.com/shafayetShafee/reveal-header) for further
+customisation such as adding a `header-logo` and other options available with this extension.
 
 ## Embedding Code
 

@@ -14,8 +14,9 @@ globs:
   - "**/*.qmd"
 
 ignore:
-  - ".quarto/*"
-  - "_site/*"
+  - ".quarto/**/*.md"
+  - "_site/**/*.md"
+  - "renv/**/*.md"
 
 # Fix any fixable errors
 fix: true
