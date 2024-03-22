@@ -21,11 +21,11 @@ jobs:
 
       - name: Install Quarto Extensions
         run: |
-          quarto add --no-prompt extension jmbuhr/quarto-qrcode
-          quarto add --no-prompt extension grantmcdermott/quarto-revealjs-clean
-          quarto add --no-prompt extension ArthurData/quarto-confetti
-          quarto add --no-prompt extension davidwilby/openlinksinnewpage
-          quarto add --no-prompt extension shafayetShafee/reveal-header
+          quarto add --no-prompt jmbuhr/quarto-qrcode
+          quarto add --no-prompt grantmcdermott/quarto-revealjs-clean
+          quarto add --no-prompt ArthurData/quarto-confetti
+          quarto add --no-prompt davidwilby/openlinksinnewpage
+          quarto add --no-prompt shafayetShafee/reveal-header
 
       - name: Install Python and Dependencies
         uses: actions/setup-python@v4
